@@ -57,8 +57,8 @@
 /*=============== BASE ===============*/
 
 *,
- ::before,
- ::after {
+::before,
+::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -432,6 +432,9 @@ body.dark-theme {
 
 .footer {
     background-color: #F0941F;
+    position: absolute;
+    width: 100%;
+    top: 370em;
     /* background-color: var(--first-color-lighten); */
     padding-bottom: 1rem;
     padding-top: 2rem;
@@ -461,6 +464,14 @@ body.dark-theme {
 .footer__links {
     display: grid;
     row-gap: .5rem;
+    margin-right: 2em;
+    position: relative;
+    bottom: 2.8em;
+}
+
+.footer__content>h3 {
+    position: relative;
+    bottom: 2.5em;
 }
 
 .footer__link {
@@ -470,6 +481,9 @@ body.dark-theme {
 .footer__social {
     display: flex;
     column-gap: 1.5rem;
+    position: absolute;
+    top: 11%;
+    right: 45%;
 }
 
 .footer__social-link {
@@ -482,6 +496,20 @@ body.dark-theme {
     text-align: center;
     font-size: var(--smaller-font-size);
     color: var(--text-color);
+}
+
+.footer__content>img {
+    position: absolute;
+    width: 15%;
+    right: 80%;
+    top: 10%;
+}
+
+.footer__content>p {
+    color: white;
+    position: absolute;
+    right: 88.5%;
+    top: 26%
 }
 
 
@@ -656,7 +684,8 @@ body.dark-theme {
         grid-template-columns: repeat(5, 1fr);
     }
     .footer__social {
-        align-items: flex-start;
+        position: absolute;
+        left: 90%;
     }
     .footer__social-link {
         font-size: 1.45rem;
@@ -773,6 +802,10 @@ body.dark-theme {
     overflow: hidden;
 }
 
+.main {
+    z-index: 100;
+}
+
 .tmp-container {
     position: absolute;
     width: 100%;
@@ -794,6 +827,16 @@ body.dark-theme {
     /* transition: 1.8s ease-in-out; */
     border-radius: 90%;
     z-index: 10;
+}
+
+.contactUS {
+    height: 450px;
+}
+
+.banner {}
+
+.button {
+    border-radius: 110px;
 }
 
 @media (max-width: 870px) {
@@ -823,4 +866,125 @@ body.dark-theme {
         bottom: 72%;
         left: 50%;
     }
+}
+
+@media only screen and (max-width: 875px) {
+    fieldset {
+        z-index: 100;
+        position: absolute;
+        border: 1px solid black;
+        width: 65vw;
+        height: 55vh;
+        left: 15%;
+        top: 315em;
+        border-radius: 22px;
+        border: 1px solid rgb(249, 137, 0);
+        background-color: rgb(249, 137, 0);
+    }
+    .input {
+        margin-top: 4vh;
+        margin-left: 3vw;
+        width: 50vw;
+        background-color: rgb(230, 234, 226);
+        border-radius: 35px;
+    }
+    .check {
+        display: flex;
+        flex-direction: row;
+    }
+    .confidential {
+        color: white;
+    }
+    .banner {
+        display: none;
+    }
+    .info {
+        display: none;
+    }
+    .info2 {
+        display: none;
+    }
+    .boutton {
+        width: 25vw;
+        height: 5vh;
+        margin-left: 7vw;
+        background-color: rgb(230, 234, 226);
+    }
+    h5 {
+        margin-top: 2vw;
+    }
+    .txt {
+        height: 35%;
+        margin-top: 1vh;
+        margin-left: 2vw;
+    }
+}
+
+@media only screen and (min-width: 875px) {
+    fieldset {
+        z-index: 100;
+        position: absolute;
+        border: 1px solid black;
+        width: 29vw;
+        height: 55vh;
+        left: 50%;
+        top: 327em;
+        border-radius: 22px;
+        border: 1px solid rgb(249, 137, 0);
+        background-color: rgb(249, 137, 0);
+    }
+    .input {
+        margin-top: 4vh;
+        margin-left: 3vw;
+        width: 22vw;
+        background-color: rgb(230, 234, 226);
+        border-radius: 35px;
+    }
+    .check {
+        display: flex;
+        flex-direction: row;
+    }
+    .confidential {
+        color: white;
+    }
+    .banner {
+        z-index: 100;
+        position: absolute;
+        left: 17vw;
+        top: 330em;
+        flex-direction: column;
+        height: 32vh;
+        width: 71vw;
+        background-color: rgb(205, 207, 201);
+        border: 1px solid rgb(205, 207, 201);
+        border-radius: 22px;
+    }
+    .info {
+        z-index: 100;
+        width: 45%;
+        margin-top: 2vh;
+        margin-left: 2vw;
+    }
+    .info2 {
+        z-index: 100;
+        width: 45%;
+    }
+    .boutton {
+        width: 10vw;
+        height: 5vh;
+        margin-left: 4vw;
+        background-color: rgb(230, 234, 226);
+    }
+    h5 {
+        margin-top: 2vw;
+    }
+    .txt {
+        height: 35%;
+        margin-top: 1vh;
+        margin-left: 2vw;
+    }
+}
+
+.security__description {
+    font-size: 18px;
 }
